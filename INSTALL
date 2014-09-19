@@ -1,0 +1,9 @@
+Building bitxcoin
+
+See doc/readme-qt.rst for instructions on building bitxcoin QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of bitxcoin.
+
+See doc/build-*.txt for instructions on building bitxcoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of bitxcoin.
