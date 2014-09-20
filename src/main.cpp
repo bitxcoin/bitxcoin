@@ -293,7 +293,7 @@ bool CTransaction::ReadFromDisk(COutPoint prevout)
 bool CTransaction::IsStandard() const
 {
     if (nVersion > CTransaction::CURRENT_VERSION)
-        return false;
+        return false; 
 
     BOOST_FOREACH(const CTxIn& txin, vin)
     {
@@ -2455,7 +2455,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nNonce   = 709811;
         
         
-        if (false  && (block.GetHash() != hashGenesisBlock)) {
+        if (true  && (block.GetHash() != hashGenesisBlock)) {
 
         // This will figure out a valid hash and Nonce if you're
         // creating a different genesis block:
@@ -2471,17 +2471,18 @@ bool LoadBlockIndex(bool fAllowNew)
                }
         }
         block.print();
+      
         printf("block.GetHash() == %s\n", block.GetHash().ToString().c_str());
         printf("block.hashMerkleRoot == %s\n", block.hashMerkleRoot.ToString().c_str());
         printf("block.nTime = %u \n", block.nTime);
         printf("block.nNonce = %u \n", block.nNonce);
         
         //// debug print
-        assert(block.hashMerkleRoot == uint256("0x5e34bb50035a01b822515d0aed09eafc1647c19b16e210e76ddb714af8274109"));
+        assert(block.hashMerkleRoot == uint256("0x675bb4dc9e37cd775757604c95b3d2dcb234a5573b3beab82b4ce5e5fc6ebdc6"));
         block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
-
+          
         // Start new block file
         unsigned int nFile;
         unsigned int nBlockPos;
