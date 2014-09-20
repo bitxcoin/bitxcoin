@@ -2439,7 +2439,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
         const char* pszTimestamp = "Sat, 20 Sep 2014 08:14:28 GMT";
         CTransaction txNew;
-        txNew.nTime = 1411200868;
+        txNew.nTime = 1408282287;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
